@@ -1,0 +1,116 @@
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    position: relative;
+    z-index: 99;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 25px;
+    color: tomato;
+}
+
+.logo font {
+    color: #fff;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.menu-list li:last-child a {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: black;
+    margin-left: 20px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-list li a:hover,
+.menu-list li a.active {
+    background: tomato;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 20px;
+}
+
+.menu-icon .fa-xmark {
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out;
+}
+.menu-icon .fa-bars {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive media query */
+@media screen and (max-width: 800px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-list li a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        padding: 20px;
+        right: 0;
+        top: 64px;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-list li {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-list li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu-list li a, 
+    .menu-list li:last-child a {
+        width: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    .menu-list.close {
+        right: -100%;
+        transition: all 0.3s ease-in-out;
+    }
+}
