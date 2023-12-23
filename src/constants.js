@@ -1,9 +1,3 @@
-import Home from './pages/Home';
-import KeyFeatures from './pages/KeyFeatures';
-import Pricing from './pages/Pricing';
-import Testimonials from './pages/Testimonials';
-import TryForFree from './pages/TryForFree';
-
 export const MenuList = [
     {
         title: "Home",
